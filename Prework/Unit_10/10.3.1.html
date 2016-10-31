@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by anonymous (http://jsbin.com/yumonehedu/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<style id="jsbin-css">
+.current {
+  background-color: #FCDC13;
+}
+
+#next {
+  background-color: #FFA7C0;
+}
+
+.finished {
+  text-decoration: line-through;
+}
+
+.cool {
+  border: 2px solid #00D0CB;
+  margin: 5px 0;
+}
+
+</style>
+<h1>Reading List</h1>
+
+<ul class="list">
+  <li class="current">The Wind Up Bird Chronicle</li>
+  <li class="current">A Visit From the Goon Squad</li>
+  <li id="next">The Flamethrowers</li>
+  <li>To Kill a Mockingbird</li>
+  <li>Kafka on the Shore</li>
+</ul>
+
+<button id="chill">Chill!</button>
+
+<script id="jsbin-javascript">
+document.querySelectorAll('.current')[1].textContent = "Me Talk Pretty One Day";
+document.getElementById('next').innerHTML = '<a href="http://www.amazon.com/Flamethrowers-Rachel-Kushner/dp/1439142017/ref=sr_1_1?ie=UTF8&qid=1458897183&sr=8-1&keywords=the+flamethrowers">The Flamethrowers</a>';
+document.querySelector('li').innerHTML = "The Wind Up <strong>Bird</strong> Chronicle";
+document.querySelectorAll('li')[3].textContent = "I'm the fourth!";
+
+var listItems = document.getElementsByTagName('li');
+
+for (var i = 0; i < listItems.length; i++) {
+       listItems[i].textContent = "JavaScript rules!";
+};
+
+document.getElementsByClassName('current')[0].innerHTML = "Manipulating the DOM is fun!";
+</script>
